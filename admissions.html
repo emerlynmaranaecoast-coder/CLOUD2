@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions & Scholarships | ECOAST Engineering Computing Academy of Science and Technology</title>
+  <meta name="description" content="Official Admissions Guide for ECOAST AY 2026-2027. Step-by-step application, E-CAT examination dates, scholarship grants, requirements checklist, and online portal.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .admissions-hero {
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+    }
+    .req-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .req-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+    .req-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .check-list li span.bullet {
+      color: var(--accent-emerald);
+      font-weight: bold;
+    }
+    .scholar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+    .scholar-table th, .scholar-table td {
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .scholar-table th {
+      background: var(--bg-secondary);
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+    .scholar-table td {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    @media (max-width: 900px) {
+      .req-grid { grid-template-columns: 1fr; }
+      .scholar-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ECOAST Home">
+        <img src="images/logo.svg" alt="ECOAST Logo" width="180" height="42">
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="campus.html" class="nav-link" data-i18n="nav_labs">Innovation Labs</a></li>
+          <li><a href="index.html#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+          <li><a href="admissions.html" class="nav-link active" data-i18n="nav_admissions">Admissions</a></li>
+          <li><a href="index.html#terminal" class="nav-link" data-i18n="nav_terminal">CLI Terminal</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Language">EN</button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Theme">☀️</button>
+        <a href="#apply" class="btn btn-primary btn-sm" data-i18n="nav_apply">Apply Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="admissions-hero">
+    <div class="container">
+      <div class="hero-badge-live">
+        <span class="pulse-dot"></span>
+        <span>Admissions Open for AY 2026-2027</span>
+      </div>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Admissions & Financial Aid</h1>
+      <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+        We seek ambitious, curious thinkers ready to solve complex technological challenges. Learn about requirements, examination dates, and 100% scholarship opportunities.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="#requirements" class="btn btn-primary btn-sm">Requirements Checklist</a>
+        <a href="#scholarships" class="btn btn-secondary btn-sm">Scholarship Matrix</a>
+        <a href="#ecat-schedule" class="btn btn-secondary btn-sm">E-CAT Exam Dates</a>
+        <a href="#apply" class="btn btn-outline btn-sm">Apply Online</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Requirements by Category -->
+  <section class="container" id="requirements" style="padding: 2rem 0 4rem 0;">
+    <div class="section-header">
+      <span class="section-tag">Eligibility</span>
+      <h2>Requirements by Applicant Category</h2>
+      <p>Select your track to verify all prerequisite documents for submission.</p>
+    </div>
+
+    <div class="req-grid">
+      <!-- 1. Senior High School Graduates -->
+      <div class="req-card">
+        <h3><span>🎓</span> Senior High STEM Strand</h3>
+        <ul class="check-list">
+          <li><span class="bullet">✓</span> Certified True Copy of Form 137 / 138 (Report Card)</li>
+          <li><span class="bullet">✓</span> Certificate of Good Moral Character</li>
+          <li><span class="bullet">✓</span> PSA Authenticated Birth Certificate</li>
+          <li><span class="bullet">✓</span> 2x2 ID Photos with white background (2 copies)</li>
+          <li><span class="bullet">✓</span> Certificate of Honors / General Weighted Average (if applying for Presidential or Dean's Scholarship)</li>
+        </ul>
+      </div>
+
+      <!-- 2. Non-STEM Bridging -->
+      <div class="req-card">
+        <h3><span>🔄</span> Non-STEM / TVL-ICT Graduates</h3>
+        <ul class="check-list">
+          <li><span class="bullet">✓</span> Form 137 / 138 (General Weighted Average of 85% or higher)</li>
+          <li><span class="bullet">✓</span> Certificate of Good Moral Character</li>
+          <li><span class="bullet">✓</span> PSA Authenticated Birth Certificate</li>
+          <li><span class="bullet">✓</span> Enrollment in the Free 4-Week Pre-Calculus & Python Bridging Camp</li>
+          <li><span class="bullet">✓</span> Endorsement letter from High School Principal / STEM Advisor</li>
+        </ul>
+      </div>
+
+      <!-- 3. College Transferees -->
+      <div class="req-card">
+        <h3><span>🏛️</span> College Transferees</h3>
+        <ul class="check-list">
+          <li><span class="bullet">✓</span> Official Transcript of Records (TOR) or Certificate of Grades</li>
+          <li><span class="bullet">✓</span> Honorable Dismissal / Transfer Credential Certificate</li>
+          <li><span class="bullet">✓</span> Course Descriptions for subject crediting evaluation</li>
+          <li><span class="bullet">✓</span> PSA Authenticated Birth Certificate</li>
+          <li><span class="bullet">✓</span> Minimum GWA of 2.25 with no failing grades in math or science</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-CAT Examination Schedule -->
+  <section class="container" id="ecat-schedule" style="padding-bottom: 4rem;">
+    <div class="section-header">
+      <span class="section-tag">Entrance Assessment</span>
+      <h2>E-CAT (ECOAST College Aptitude Test) Dates</h2>
+      <p>The E-CAT evaluates mathematical aptitude, algorithmic logic, and English comprehension. Testing fee is 100% free.</p>
+    </div>
+
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center;">
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+          <span style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: bold;">BATCH 1</span>
+          <h4 style="font-size: 1.25rem; margin: 0.5rem 0;">October 17 & 24, 2026</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Early Decision & Full Presidential Qualifier</p>
+          <span style="color: var(--accent-emerald); font-size: 0.8rem; font-weight: bold;">● REGISTRATION OPEN</span>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+          <span style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: bold;">BATCH 2</span>
+          <h4 style="font-size: 1.25rem; margin: 0.5rem 0;">November 21 & 28, 2026</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Regular Admission & Dean's Merit Grants</p>
+          <span style="color: var(--accent-cyan); font-size: 0.8rem; font-weight: bold;">● REGISTRATION OPEN</span>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+          <span style="font-family: var(--font-mono); color: var(--accent-cyan); font-weight: bold;">BATCH 3</span>
+          <h4 style="font-size: 1.25rem; margin: 0.5rem 0;">January 16 & 23, 2027</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Late Enrollees & Transferee Screening</p>
+          <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: bold;">○ OPENS DEC 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Scholarship Matrix -->
+  <section class="container" id="scholarships" style="padding-bottom: 4rem;">
+    <div class="section-header">
+      <span class="section-tag">Financial Assistance</span>
+      <h2>Institutional Scholarships & Grants</h2>
+      <p>Over 75% of ECOAST undergraduate students study under institutional and government scholarship grants.</p>
+    </div>
+
+    <table class="scholar-table">
+      <thead>
+        <tr>
+          <th>Grant Title</th>
+          <th>Coverage</th>
+          <th>Criteria / Requirements</th>
+          <th>Retention Conditions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: #ffffff;">Presidential Excellence Scholarship</strong></td>
+          <td><span style="color: var(--accent-emerald); font-weight: bold;">100% Tuition & All Lab Fees</span></td>
+          <td>With Highest Honors (SHS) OR Top 1% of E-CAT qualifiers</td>
+          <td>GWA ≥ 1.75 per term, no grade below 2.0</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #ffffff;">DOST-SEI Co-Partner Grant</strong></td>
+          <td><span style="color: var(--accent-cyan); font-weight: bold;">75% Tuition + Monthly Stipend</span></td>
+          <td>DOST-SEI Scholar Passer in STEM priority fields</td>
+          <td>Compliance with DOST academic guidelines</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #ffffff;">Dean's STEM Pioneer Grant</strong></td>
+          <td><span style="color: var(--accent-amber); font-weight: bold;">50% Tuition Waiver</span></td>
+          <td>With High Honors (SHS) OR Top 10% E-CAT score</td>
+          <td>GWA ≥ 2.00 per term</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #ffffff;">Women in Computing Grant</strong></td>
+          <td><span style="color: var(--accent-purple); font-weight: bold;">30% Tuition Discount</span></td>
+          <td>Female students enrolling in BS CS, Cloud, CpE, or Cyber</td>
+          <td>GWA ≥ 2.25 per term</td>
+        </tr>
+        <tr>
+          <td><strong style="color: #ffffff;">Early Tech Pioneer Discount</strong></td>
+          <td><span style="color: var(--text-highlight); font-weight: bold;">15% Discount</span></td>
+          <td>Enrollment within Batch 1 admission period</td>
+          <td>First-year completion</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Application Submission Form -->
+  <section class="application-section" id="apply">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Join the Academy</span>
+        <h2>AY 2026-2027 Application Portal</h2>
+        <p>Complete this form to reserve your E-CAT testing slot and scholarship evaluation.</p>
+      </div>
+
+      <div class="application-wrapper">
+        <form id="applicationForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appFullName">Full Legal Name *</label>
+              <input type="text" id="appFullName" class="form-input" placeholder="e.g. Maria Clara Santos" required>
+            </div>
+            <div class="form-group">
+              <label for="appEmail">Email Address *</label>
+              <input type="email" id="appEmail" class="form-input" placeholder="e.g. maria.santos@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appPhone">Mobile Number *</label>
+              <input type="tel" id="appPhone" class="form-input" placeholder="+63 917 000 0000" required>
+            </div>
+            <div class="form-group">
+              <label for="appProgram">Target Degree Program *</label>
+              <select id="appProgram" class="form-select" required>
+                <option value="BS Computer Science (AI & ML)">B.S. Computer Science (AI & ML)</option>
+                <option value="BS Cloud Computing">B.S. Cloud Computing & Distributed Systems</option>
+                <option value="BS Computer Engineering">B.S. Computer Engineering (Robotics)</option>
+                <option value="BS Cybersecurity">B.S. Cybersecurity & Digital Forensics</option>
+                <option value="BS Data Science">B.S. Data Science & Big Data</option>
+                <option value="BS Electronics Engineering">B.S. Electronics Engineering (5G/IoT)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appApplicantType">Academic Standing *</label>
+              <select id="appApplicantType" class="form-select" required>
+                <option value="SHS With Highest Honors">SHS With Highest Honors (Presidential Qualifier)</option>
+                <option value="SHS With High Honors">SHS With High Honors (Dean's Qualifier)</option>
+                <option value="SHS Regular STEM Graduate">SHS Regular STEM Graduate</option>
+                <option value="Non-STEM Graduate">Non-STEM Graduate (Summer Bridging)</option>
+                <option value="Transferee">College Transferee</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="appExamVenue">Preferred Examination Setup *</label>
+              <select id="appExamVenue" class="form-select" required>
+                <option value="On-Campus Main Hub">On-Campus Testing (ECOAST Innovation Hub)</option>
+                <option value="Online Proctored Remote Exam">Online Proctored Remote Exam</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="appMessage">Statement of Interest or Projects (GitHub / Portfolio):</label>
+            <textarea id="appMessage" class="form-textarea" placeholder="Share why you want to pursue engineering at ECOAST..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <span>Submit Application & Claim E-CAT Pass</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot Widget -->
+  <button class="chat-widget-btn" id="chatWidgetBtn" aria-label="Open ECOAST Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div class="chat-widget-popup" id="chatWidgetPopup">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h4 style="font-size: 0.95rem; color: #ffffff;">Echo Virtual Assistant</h4>
+          <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Online • ECOAST Bot</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;">&times;</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">
+        Hello! Have questions about admissions or scholarship deadlines? Ask me right away!
+      </div>
+    </div>
+    <div class="chat-chips">
+      <button class="chat-chip" data-query="E-CAT examination dates">Exam Dates</button>
+      <button class="chat-chip" data-query="Presidential scholarship criteria">Presidential Grant</button>
+      <button class="chat-chip" data-query="Non-STEM bridging program">Non-STEM rules</button>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Type question...">
+      <button id="sendChatBtn" class="chat-send-btn" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 ECOAST (Engineering Computing Academy of Science and Technology). All rights reserved.</div>
+        <div><a href="index.html#calculator" style="color: var(--accent-cyan);">Try Tuition Calculator &rarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

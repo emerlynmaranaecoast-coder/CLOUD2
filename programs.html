@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Programs | ECOAST Engineering Computing Academy of Science and Technology</title>
+  <meta name="description" content="Explore ABET-aligned undergraduate engineering and computing degrees at ECOAST. Artificial Intelligence, Cloud Systems, Robotics, Cybersecurity, Data Science, and 5G Communications.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .program-hero {
+      padding: 4rem 0 3rem 0;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
+    }
+    .deep-program-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      transition: var(--transition);
+    }
+    .deep-program-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: var(--shadow-glow);
+    }
+    .program-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .program-grid-details {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .outcomes-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+    .career-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+    .career-list li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .career-list li::before {
+      content: '▹';
+      color: var(--accent-cyan);
+      font-weight: bold;
+    }
+    .cert-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      margin: 0.2rem;
+    }
+    @media (max-width: 900px) {
+      .program-grid-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ECOAST Home">
+        <img src="images/logo.svg" alt="ECOAST Logo" width="180" height="42">
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="programs.html" class="nav-link active" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="campus.html" class="nav-link" data-i18n="nav_labs">Innovation Labs</a></li>
+          <li><a href="index.html#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+          <li><a href="admissions.html" class="nav-link" data-i18n="nav_admissions">Admissions</a></li>
+          <li><a href="index.html#terminal" class="nav-link" data-i18n="nav_terminal">CLI Terminal</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Language">EN</button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Theme">☀️</button>
+        <a href="index.html#apply" class="btn btn-primary btn-sm" data-i18n="nav_apply">Apply Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="program-hero">
+    <div class="container">
+      <span class="section-tag">Curriculum of Excellence</span>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Academic Degree Programs</h1>
+      <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+        ECOAST programs combine mathematical rigor, high-performance computing, advanced robotics hardware, and mandatory corporate internships.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="#cs" class="btn btn-secondary btn-sm">B.S. CS (AI/ML)</a>
+        <a href="#cloud" class="btn btn-secondary btn-sm">B.S. Cloud Computing</a>
+        <a href="#cpe" class="btn btn-secondary btn-sm">B.S. Computer Engineering</a>
+        <a href="#cyber" class="btn btn-secondary btn-sm">B.S. Cybersecurity</a>
+        <a href="#data" class="btn btn-secondary btn-sm">B.S. Data Science</a>
+        <a href="#ece" class="btn btn-secondary btn-sm">B.S. Electronics Eng</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Detailed List -->
+  <main class="container" style="padding-bottom: 6rem;">
+
+    <!-- 1. BS Computer Science (AI Track) -->
+    <article class="deep-program-card" id="cs">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Computer Science — Artificial Intelligence & Machine Learning</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 168 Total Credit Units • 600-Hour Industry Practicum
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cs">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        The BSCS Artificial Intelligence track is engineered for students who want to build the future of autonomous intelligence. Students master foundational mathematics (linear algebra, multivariate calculus, discrete math), data structures, and state-of-the-art deep learning architectures including Transformers, Diffusion Models, and Multi-Agent Reinforcement Learning. All students receive guaranteed GPU compute hours on our NVIDIA H100 supercomputing cluster.
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">Deep Neural Networks</span>
+            <span class="cert-pill">Natural Language Processing & LLMs</span>
+            <span class="cert-pill">Computer Vision & NeRFs</span>
+            <span class="cert-pill">Reinforcement Learning</span>
+            <span class="cert-pill">Distributed AI Training</span>
+            <span class="cert-pill">AI Model Safety & Alignment</span>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Embedded Professional Certifications</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Students are sponsored to take and pass: <strong>NVIDIA Certified Associate — Generative AI</strong> and <strong>AWS Certified Machine Learning Specialty</strong>.
+          </p>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>AI / Machine Learning Engineer (₱75k - ₱140k/mo)</li>
+            <li>Computer Vision Specialist</li>
+            <li>LLM Solutions Architect</li>
+            <li>Autonomous Systems Developer</li>
+            <li>Data Science Research Associate</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. BS Cloud Computing -->
+    <article class="deep-program-card" id="cloud">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Cloud Computing & Distributed Systems</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 164 Total Credit Units • 600-Hour Industry Practicum
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cloud">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        As the digital backbone of the modern economy, distributed cloud systems power everything from banking to global streaming services. This pioneering program covers multi-cloud architecture (AWS, Azure, Google Cloud), Infrastructure as Code (Terraform), container orchestration (Kubernetes), high-availability distributed databases, and Site Reliability Engineering (SRE).
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">Multi-Cloud Architecture</span>
+            <span class="cert-pill">Kubernetes & Service Meshes</span>
+            <span class="cert-pill">DevOps CI/CD Automation</span>
+            <span class="cert-pill">Site Reliability Engineering</span>
+            <span class="cert-pill">Serverless & Event-Driven Systems</span>
+            <span class="cert-pill">Terraform & IaC</span>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Embedded Professional Certifications</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Includes vouchers for: <strong>AWS Certified Solutions Architect Associate</strong>, <strong>Certified Kubernetes Administrator (CKA)</strong>, and <strong>HashiCorp Certified Terraform Associate</strong>.
+          </p>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>Cloud Solutions Architect (₱80k - ₱160k/mo)</li>
+            <li>DevOps / DevSecOps Engineer</li>
+            <li>Site Reliability Engineer (SRE)</li>
+            <li>Infrastructure Automation Lead</li>
+            <li>Distributed Systems Architect</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. BS Computer Engineering (Robotics) -->
+    <article class="deep-program-card" id="cpe">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Computer Engineering — Robotics & Cyber-Physical Systems</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 172 Total Credit Units • PRC Board-Eligible
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cpe">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        Fusing hardware engineering with embedded computing, BS CpE at ECOAST trains engineers to build autonomous mobile robots, smart drones, industrial automation lines, and medical robotic manipulators. Students work in our Autonomous Mechatronics Arena using ROS2, ARM Cortex microcontrollers, FPGA silicon chips, and digital signal processors.
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">Robot Operating System 2 (ROS2)</span>
+            <span class="cert-pill">Microprocessor Architecture (RISC-V)</span>
+            <span class="cert-pill">FPGA & Verilog HDL</span>
+            <span class="cert-pill">Autonomous SLAM Navigation</span>
+            <span class="cert-pill">Embedded RTOS (FreeRTOS)</span>
+            <span class="cert-pill">Industrial Mechatronics</span>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Lab & Hardware Facility Access</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            24/7 access to the Mechatronics Arena, Universal Robots collaborative arm workstations, 3D additive manufacturing lab, and high-frequency oscilloscopes.
+          </p>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>Robotics Systems Engineer (₱70k - ₱135k/mo)</li>
+            <li>Embedded Firmware Developer</li>
+            <li>IoT Hardware Architect</li>
+            <li>FPGA Design Engineer</li>
+            <li>Industrial Automation Specialist</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. BS Cybersecurity -->
+    <article class="deep-program-card" id="cyber">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Cybersecurity & Digital Forensics</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 165 Total Credit Units • Live Cyber Range Practicum
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cyber">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        Defend critical infrastructure and uncover advanced cyber intrusions. Students train inside ECOAST's dedicated Security Operations Center (SOC) running offensive Red Team simulations, defensive Blue Team monitoring, malware reverse engineering, packet dissection, and digital forensics following global ISO/NIST standards.
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">Ethical Hacking & Pen Testing</span>
+            <span class="cert-pill">SOC Analytics & Splunk SIEM</span>
+            <span class="cert-pill">Malware Disassembly & Sandboxing</span>
+            <span class="cert-pill">Digital Forensics (DFIR)</span>
+            <span class="cert-pill">Applied Cryptography</span>
+            <span class="cert-pill">Zero Trust & Identity</span>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Embedded Professional Certifications</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Direct preparation for: <strong>CompTIA Security+</strong>, <strong>Certified Ethical Hacker (CEH)</strong>, and <strong>Cisco CyberOps Associate</strong>.
+          </p>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>SOC Security Analyst Tier 2/3 (₱75k - ₱150k/mo)</li>
+            <li>Penetration Tester / Red Teamer</li>
+            <li>Incident Response Investigator</li>
+            <li>Cyber Threat Hunter</li>
+            <li>Information Security Auditor</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. BS Data Science -->
+    <article class="deep-program-card" id="data">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Data Science & Big Data Engineering</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 166 Total Credit Units • Real-Time Data Pipeline Practicum
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="data">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        Transform massive datasets into strategic intelligence. The BS Data Science program blends computational statistics, distributed streaming engines (Kafka, Spark), econometric forecasting, and cloud data warehousing (Snowflake, BigQuery).
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">Distributed Data Processing (Spark)</span>
+            <span class="cert-pill">Event Streaming (Apache Kafka)</span>
+            <span class="cert-pill">Bayesian Predictive Statistics</span>
+            <span class="cert-pill">Modern Data Warehousing</span>
+            <span class="cert-pill">Data Governance & Pipelines</span>
+          </div>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>Big Data Engineer (₱75k - ₱145k/mo)</li>
+            <li>Senior Quantitative Analyst</li>
+            <li>Business Intelligence Architect</li>
+            <li>Analytics Product Manager</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. BS Electronics Engineering -->
+    <article class="deep-program-card" id="ece">
+      <div class="program-header-row">
+        <div>
+          <span class="degree-tag" style="font-size: 0.85rem;">BACHELOR OF SCIENCE</span>
+          <h2 style="font-size: 2rem; margin-top: 0.4rem;">Electronics Engineering — 5G/6G & Satellite Systems</h2>
+          <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">
+            4-Year Program • 174 Total Credit Units • PRC ECE Board-Aligned
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem;">
+          <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="ece">View 4-Year Syllabus</button>
+          <a href="index.html#apply" class="btn btn-secondary btn-sm">Apply</a>
+        </div>
+      </div>
+
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+        Explore wireless cellular infrastructure, high-frequency RF transmission, satellite ground stations, and smart IoT telemetry. Students design semiconductor circuits, simulate microwave propagation, and construct micro-satellites (CubeSats).
+      </p>
+
+      <div class="program-grid-details">
+        <div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem;">Core Subject Modules</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span class="cert-pill">5G NR Cellular Networks</span>
+            <span class="cert-pill">RF Microwave Circuit Design</span>
+            <span class="cert-pill">Digital Signal Processing (DSP)</span>
+            <span class="cert-pill">CubeSat Space Telecommunications</span>
+            <span class="cert-pill">Semiconductor Physics</span>
+          </div>
+        </div>
+
+        <div class="outcomes-box">
+          <h4 style="font-size: 1.05rem; color: #ffffff;">Career Pathways & Salaries</h4>
+          <ul class="career-list">
+            <li>Telecommunications RF Engineer (₱65k - ₱130k/mo)</li>
+            <li>Satellite Ground Station Specialist</li>
+            <li>Semiconductor Test Engineer</li>
+            <li>Hardware IoT Solutions Architect</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Interactive Curriculum Syllabus Modal (Reused) -->
+  <div class="modal-overlay" id="curriculumModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalDegreeTitle" style="font-size: 1.35rem; color: #ffffff;">Degree Curriculum</h3>
+          <p id="modalDuration" style="font-size: 0.85rem; color: var(--accent-cyan);">4 Years • 8 Semesters</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc" style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Program outline.</p>
+        <div class="modal-year-tabs">
+          <button class="year-tab-btn active" data-year="1">1st Year</button>
+          <button class="year-tab-btn" data-year="2">2nd Year</button>
+          <button class="year-tab-btn" data-year="3">3rd Year</button>
+          <button class="year-tab-btn" data-year="4">4th Year (Capstones & Co-Op)</button>
+        </div>
+        <div class="courses-list" id="modalCoursesList">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot Widget -->
+  <button class="chat-widget-btn" id="chatWidgetBtn" aria-label="Open ECOAST Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div class="chat-widget-popup" id="chatWidgetPopup">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h4 style="font-size: 0.95rem; color: #ffffff;">Echo Virtual Assistant</h4>
+          <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Online • ECOAST Bot</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;">&times;</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">
+        Need advice on which engineering or computing track matches your interests? Ask me anything!
+      </div>
+    </div>
+    <div class="chat-chips">
+      <button class="chat-chip" data-query="Which program is best for AI?">Best for AI?</button>
+      <button class="chat-chip" data-query="Tell me about BS Cloud Computing">Cloud Track</button>
+      <button class="chat-chip" data-query="Tuition & Scholarships">Scholarships</button>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Type question...">
+      <button id="sendChatBtn" class="chat-send-btn" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 ECOAST (Engineering Computing Academy of Science and Technology). All rights reserved.</div>
+        <div><a href="index.html#apply" style="color: var(--accent-cyan);">Apply for AY 2026-2027 &rarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

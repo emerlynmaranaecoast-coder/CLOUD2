@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOAST | Engineering Computing Academy of Science and Technology</title>
+  <meta name="description" content="ECOAST is the premier engineering and computing academy specializing in Artificial Intelligence, Cloud Systems, Robotics, Cybersecurity, and Data Science. AY 2026-2027 Admissions Now Open.">
+  <meta name="keywords" content="ECOAST, Engineering Computing Academy of Science and Technology, Computer Science, Computer Engineering, Cloud Computing, Cybersecurity, Robotics, Philippines, Scholarships, DOST">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Backgrounds -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ECOAST Home">
+        <img src="images/logo.svg" alt="ECOAST Logo" width="180" height="42">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="campus.html" class="nav-link" data-i18n="nav_labs">Innovation Labs</a></li>
+          <li><a href="#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+          <li><a href="admissions.html" class="nav-link" data-i18n="nav_admissions">Admissions</a></li>
+          <li><a href="#terminal" class="nav-link" data-i18n="nav_terminal">CLI Terminal</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons: Language, Theme & Apply CTA -->
+      <div class="nav-actions">
+        <!-- Language Switcher (EN / FIL) -->
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Switch Language / Palitan ng Wika">EN</button>
+        
+        <!-- Dark / Light Mode Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Switch Theme">☀️</button>
+        
+        <a href="#apply" class="btn btn-primary btn-sm" data-i18n="nav_apply">Apply Now</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge-live">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero_badge">AY 2026-2027 Admissions Open • E-CAT Batch 1</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering the Future of <span class="gradient-text">Intelligent Computing</span> & Technology.
+        </h1>
+
+        <p class="hero-desc" data-i18n="hero_desc">
+          ECOAST (Engineering Computing Academy of Science and Technology) is a world-class institute transforming aspiring innovators into top-tier Cloud Architects, Robotics Engineers, AI Specialists, and Cyber Defense Leaders.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="programs.html" class="btn btn-primary btn-lg" data-i18n="hero_cta_explore">
+            <span>Explore Programs</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#apply" class="btn btn-secondary btn-lg" data-i18n="hero_cta_apply">
+            <span>Start Online Application</span>
+          </a>
+          <a href="#terminal" class="btn btn-outline btn-lg">
+            <span>Launch CLI</span>
+          </a>
+        </div>
+
+        <!-- Trust Highlights -->
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_highlight_1">ABET-Aligned Curriculum</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_highlight_2">Guaranteed Industry Co-op</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="hero_highlight_3">100% Scholarship Grants</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Showcase -->
+      <div class="hero-visual">
+        <div class="hero-media-wrapper">
+          <img src="images/hero-campus.jpg" alt="ECOAST Modern Campus and Innovation Tower" loading="eager">
+          <div class="hero-floating-card">
+            <div class="floating-info">
+              <h4>ECOAST Innovation Hub</h4>
+              <p>Quantum Cluster • Robotics Arena • Cloud Testbed</p>
+            </div>
+            <span class="floating-badge">Ranked #1 Tech Hub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Bar -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="98.4" data-suffix="%">0%</div>
+          <div class="stat-label" data-i18n="stat_employment">Graduate Employment Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="52" data-suffix="+">0</div>
+          <div class="stat-label" data-i18n="stat_partners">Global Tech Partners (AWS, Google, NVIDIA)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="14" data-suffix="+">0</div>
+          <div class="stat-label" data-i18n="stat_labs">Specialized Supercomputing Labs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="45" data-prefix="₱" data-suffix="M+">₱0M+</div>
+          <div class="stat-label" data-i18n="stat_scholarship">Annual Scholarship Grants Awarded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner & Accreditation Marquee -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="marquee-label">Industry Curriculum Partners & Accreditation Alliances</div>
+    </div>
+    <div class="marquee-track">
+      <div class="partner-pill"><span>☁️</span> AWS Academy Partner</div>
+      <div class="partner-pill"><span>🌐</span> Google Cloud Higher Ed</div>
+      <div class="partner-pill"><span>🤖</span> NVIDIA Deep Learning Institute</div>
+      <div class="partner-pill"><span>💻</span> Microsoft Learn for Educators</div>
+      <div class="partner-pill"><span>🛡️</span> Cisco Networking Academy</div>
+      <div class="partner-pill"><span>🔬</span> DOST-SEI Partner Institution</div>
+      <div class="partner-pill"><span>⚡</span> Intel FPGA Academic Program</div>
+      <div class="partner-pill"><span>🚀</span> GitHub Campus Program</div>
+      <div class="partner-pill"><span>🎓</span> IEEE & ACM Student Chapters</div>
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="partner-pill"><span>☁️</span> AWS Academy Partner</div>
+      <div class="partner-pill"><span>🌐</span> Google Cloud Higher Ed</div>
+      <div class="partner-pill"><span>🤖</span> NVIDIA Deep Learning Institute</div>
+      <div class="partner-pill"><span>💻</span> Microsoft Learn for Educators</div>
+      <div class="partner-pill"><span>🛡️</span> Cisco Networking Academy</div>
+      <div class="partner-pill"><span>🔬</span> DOST-SEI Partner Institution</div>
+      <div class="partner-pill"><span>⚡</span> Intel FPGA Academic Program</div>
+      <div class="partner-pill"><span>🚀</span> GitHub Campus Program</div>
+      <div class="partner-pill"><span>🎓</span> IEEE & ACM Student Chapters</div>
+    </div>
+  </section>
+
+  <!-- Why Choose ECOAST (Pillars) -->
+  <section class="pillars-section" id="about-pillars">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The ECOAST Advantage</span>
+        <h2 data-i18n="why_title">Why Choose ECOAST?</h2>
+        <p data-i18n="why_desc">We combine rigorous computational science, hands-on hardware engineering, and Silicon Valley-style project incubators.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3>Industry-First Curriculum</h3>
+          <p>Our syllabi are co-designed directly with tech giants including AWS, Google Cloud, and NVIDIA. Learn real production tooling, Kubernetes, PyTorch, and RISC-V from day one.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>NVIDIA H100 Supercomputing</h3>
+          <p>Gain unthrottled access to our on-premise GPU supercomputing cluster. Train 70B parameter models, simulate quantum circuits, and render complex computational fluid dynamics.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>100% Scholarship Programs</h3>
+          <p>We ensure financial constraints never hinder brilliant minds. Full Presidential waivers, DOST co-scholarships, and Women in Tech grants cover tuition and laboratory fees.</p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>600-Hour Corporate Co-Op</h3>
+          <p>Unlike standard passive internships, every ECOAST senior completes a paid 6-month corporate co-op embedded with leading multinational tech engineering teams.</p>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Live Cyber Range & SOC</h3>
+          <p>Train inside an air-gapped security operations center. Defend against live APT attacks, execute penetration testing, and analyze malware in sandbox environments.</p>
+        </div>
+
+        <!-- Pillar 6 -->
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Startup Incubator & Patents</h3>
+          <p>Turn your senior capstone thesis into a venture-backed startup. Our Venture Lab provides seed funding, patent filing assistance, and mentorship from startup founders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Academic Programs Catalog -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Undergraduate Degrees</span>
+        <h2 data-i18n="programs_title">Specialized Degree Programs</h2>
+        <p data-i18n="programs_desc">Engineered for the demands of Industry 4.0 and next-generation computational challenges.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Programs</button>
+        <button class="filter-btn" data-filter="ai">AI & Computing</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & Cyber</button>
+        <button class="filter-btn" data-filter="eng">Hardware & Robotics</button>
+        <button class="filter-btn" data-filter="data">Data & Telecom</button>
+      </div>
+
+      <!-- Program Cards Grid -->
+      <div class="programs-grid">
+        <!-- Program 1: BS CS (AI Track) -->
+        <div class="program-card" data-category="ai">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. CS</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Computer Science (AI & Machine Learning)</h3>
+            <p>Master deep learning architectures, LLMs, computer vision, and neural reasoning algorithms while running experiments on NVIDIA GPU superclusters.</p>
+            <div class="program-skills">
+              <span class="skill-badge">PyTorch</span>
+              <span class="skill-badge">TensorFlow</span>
+              <span class="skill-badge">Transformers</span>
+              <span class="skill-badge">Reinforcement Learning</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cs">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+
+        <!-- Program 2: BS Cloud Computing -->
+        <div class="program-card" data-category="cloud">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. CLOUD</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Cloud Computing & Distributed Architecture</h3>
+            <p>Design hyper-scalable multi-cloud infrastructure, DevOps CI/CD automation pipelines, Kubernetes clusters, and zero-downtime microservices.</p>
+            <div class="program-skills">
+              <span class="skill-badge">AWS & GCP</span>
+              <span class="skill-badge">Kubernetes</span>
+              <span class="skill-badge">Terraform</span>
+              <span class="skill-badge">Site Reliability Eng</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cloud">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+
+        <!-- Program 3: BS Computer Engineering -->
+        <div class="program-card" data-category="eng">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. CPE</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Computer Engineering (Robotics & IoT)</h3>
+            <p>Bridge silicon and software through FPGA logic synthesis, autonomous robotics (ROS2), embedded Linux microkernels, and cyber-physical systems.</p>
+            <div class="program-skills">
+              <span class="skill-badge">ROS2</span>
+              <span class="skill-badge">ARM / RISC-V</span>
+              <span class="skill-badge">Verilog</span>
+              <span class="skill-badge">Mechatronics</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cpe">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+
+        <!-- Program 4: BS Cybersecurity -->
+        <div class="program-card" data-category="cloud">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. CYBER</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Cybersecurity & Digital Forensics</h3>
+            <p>Specialize in offensive penetration testing, SOC blue-team detection, reverse engineering, cryptography, and zero-trust enterprise security.</p>
+            <div class="program-skills">
+              <span class="skill-badge">Ethical Hacking</span>
+              <span class="skill-badge">SOC & SIEM</span>
+              <span class="skill-badge">Reverse Eng</span>
+              <span class="skill-badge">Cryptography</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="cyber">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+
+        <!-- Program 5: BS Data Science -->
+        <div class="program-card" data-category="data">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. DATA</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Data Science & Big Data Engineering</h3>
+            <p>Engineer distributed real-time streaming pipelines with Apache Spark and Kafka, master econometric predictive models, and discover business intelligence.</p>
+            <div class="program-skills">
+              <span class="skill-badge">Apache Spark</span>
+              <span class="skill-badge">Kafka</span>
+              <span class="skill-badge">Bayesian Stats</span>
+              <span class="skill-badge">Data Warehousing</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="data">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+
+        <!-- Program 6: BS Electronics Engineering -->
+        <div class="program-card" data-category="eng">
+          <div>
+            <div class="program-meta">
+              <span class="degree-tag">B.S. ECE</span>
+              <span class="duration-tag">4 Years • 8 Terms</span>
+            </div>
+            <h3>Electronics Engineering (5G/6G & Satellite)</h3>
+            <p>Pioneer wireless communications, RF microwave circuit designs, smart sensor networks, and low-earth orbit satellite telecommunications.</p>
+            <div class="program-skills">
+              <span class="skill-badge">5G New Radio</span>
+              <span class="skill-badge">RF Circuits</span>
+              <span class="skill-badge">DSP</span>
+              <span class="skill-badge">Satellite IoT</span>
+            </div>
+          </div>
+          <div class="program-actions">
+            <button class="btn btn-primary btn-sm view-syllabus-btn" data-program="ece">View Syllabus</button>
+            <a href="admissions.html" class="btn btn-secondary btn-sm">Enroll</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="programs.html" class="btn btn-outline btn-lg">View Complete Academic Catalog & Syllabi &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation Labs & Research Showcase -->
+  <section class="labs-section" id="labs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">World-Class Facilities</span>
+        <h2 data-i18n="labs_title">Innovation Centers & Tech Labs</h2>
+        <p data-i18n="labs_desc">Discover where ECOAST students and researchers push the frontiers of computing and engineering.</p>
+      </div>
+
+      <div class="labs-grid">
+        <!-- Interactive Showcase Visual -->
+        <div class="labs-showcase-card">
+          <img id="labShowcaseImg" src="images/robotics-lab.jpg" alt="ECOAST High-Tech Robotics Laboratory">
+          <div class="hero-floating-card" style="bottom: 15px; left: 15px; right: 15px;">
+            <div>
+              <h4 id="labShowcaseTitle">Quantum & High-Performance Computing (HPC) Cluster</h4>
+              <p id="labShowcaseSpecs">32-node GPU cluster powered by NVIDIA H100 GPUs, 1.2 PetaFLOPS FP64 compute.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Selectors -->
+        <div class="labs-content-tabs">
+          <div class="lab-tab-item active" data-lab="supercomputing">
+            <h4><span>⚡ Quantum & HPC Cluster</span> <span>01</span></h4>
+            <p>Dedicated to training neural networks, distributed systems research, and quantum simulation with ultra-low latency InfiniBand fabric.</p>
+          </div>
+
+          <div class="lab-tab-item" data-lab="robotics">
+            <h4><span>🦾 Mechatronics & Robotics Arena</span> <span>02</span></h4>
+            <p>Equipped with 6-DoF robotic arms, omnidirectional AGV rovers, 3D LiDAR scanners, and motion capture airspace for drone swarms.</p>
+          </div>
+
+          <div class="lab-tab-item" data-lab="soc">
+            <h4><span>🛡️ Cyber Defense SOC & War Room</span> <span>03</span></h4>
+            <p>An isolated enterprise Security Operations Center running live cyber war-games, malware reverse-engineering, and digital forensics.</p>
+          </div>
+
+          <div class="lab-tab-item" data-lab="cloud">
+            <h4><span>🌐 Cloud & Edge Distributed Testbed</span> <span>04</span></h4>
+            <p>Hybrid multi-cloud testbed running multi-region Kubernetes, edge nodes, and hardware-accelerated microservices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tuition & Scholarship Calculator -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Financial Transparency</span>
+        <h2 data-i18n="calc_title">Tuition & Scholarship Calculator</h2>
+        <p data-i18n="calc_desc">Calculate your exact estimated semestral investment, merit grant deductions, and monthly installment options.</p>
+      </div>
+
+      <div class="calculator-wrapper">
+        <!-- Calculator Inputs -->
+        <div class="calc-inputs">
+          <div class="calc-form-group">
+            <label for="calcProgram">Select Intended Degree Program:</label>
+            <select id="calcProgram" class="calc-select">
+              <option value="cs">B.S. Computer Science (AI & ML Track)</option>
+              <option value="cloud" selected>B.S. Cloud Computing & Distributed Systems</option>
+              <option value="cpe">B.S. Computer Engineering (Robotics & IoT)</option>
+              <option value="cyber">B.S. Cybersecurity & Digital Forensics</option>
+              <option value="data">B.S. Data Science & Big Data Engineering</option>
+              <option value="ece">B.S. Electronics Engineering (5G & Satellite)</option>
+            </select>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="calcAcademic">High School / Academic Background:</label>
+            <select id="calcAcademic" class="calc-select">
+              <option value="highest_honors">With Highest Honors (GPA 98-100) — Qualifies for 100% Waiver</option>
+              <option value="high_honors" selected>With High Honors (GPA 95-97) — Qualifies for 50% Waiver</option>
+              <option value="honors">With Honors (GPA 90-94) — Qualifies for Pioneer Grant</option>
+              <option value="stem_regular">Senior High STEM Strand Regular Graduate</option>
+              <option value="non_stem">Non-STEM Strand (Free Bridging Program)</option>
+              <option value="transferee">College Transferee / Second Degree</option>
+            </select>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="calcScholarship">Scholarship / Grant Eligibility:</label>
+            <select id="calcScholarship" class="calc-select">
+              <option value="presidential">Presidential Excellence Grant (100% Tuition Waiver)</option>
+              <option value="dost">DOST-SEI Co-Partner Grant (75% Tuition Grant)</option>
+              <option value="deans" selected>Dean's STEM Pioneer Grant (50% Tuition Waiver)</option>
+              <option value="women_in_tech">Women in Computing & Tech Grant (30% Discount)</option>
+              <option value="early_bird">Early Bird AY 2026-2027 Enrollee (15% Discount)</option>
+              <option value="none">Standard Non-Scholar Rate</option>
+            </select>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="calcPayment">Preferred Payment Scheme:</label>
+            <select id="calcPayment" class="calc-select">
+              <option value="install4" selected>4-Month Installment Plan (Zero Interest)</option>
+              <option value="install2">2-Installment Plan (Midterms & Finals)</option>
+              <option value="full">Full Cash Payment (Additional 5% Cash Discount)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Calculator Result Card -->
+        <div class="calc-results-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h3 style="font-size: 1.25rem;">Semestral Assessment</h3>
+              <span id="calcBadgeApplied" class="scholarship-badge-applied">⭐ 50% Merit Discount Applied</span>
+            </div>
+
+            <div class="calc-result-row">
+              <span class="label">Gross Base Tuition & Labs:</span>
+              <span class="value" id="calcGrossFee">₱56,500</span>
+            </div>
+
+            <div class="calc-result-row">
+              <span class="label">Total Scholarship Discount:</span>
+              <span class="value" style="color: var(--accent-emerald);" id="calcDiscountAmount">- ₱24,000</span>
+            </div>
+
+            <div class="calc-result-row">
+              <span class="label">Discount Tier:</span>
+              <span class="value" id="calcDiscountRate">50% + 0%</span>
+            </div>
+
+            <div class="calc-result-row total">
+              <span class="label" style="font-size: 1.1rem; color: #ffffff;">Net Tuition Due:</span>
+              <span class="value" id="calcNetFee">₱32,500</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(0, 0, 0, 0.25); padding: 1.2rem; border-radius: 8px; margin-top: 1.5rem;">
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;" id="calcPaymentTerm">Monthly Installment (4 months):</div>
+            <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan);" id="calcTermAmount">₱8,125 / mo</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem;">*Includes all 22 credit units, cloud credits, supercomputing compute access, and lab consumables.</div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="#apply" class="btn btn-primary" style="width: 100%;">Lock in this Scholarship & Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Section -->
+  <section class="terminal-section" id="terminal">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Developer & Student Terminal</span>
+        <h2>ECOAST Interactive CLI Console</h2>
+        <p>Are you a coder at heart? Test your terminal skills, explore academy data, or try our quick logic challenge.</p>
+      </div>
+
+      <div class="terminal-box">
+        <div class="terminal-topbar">
+          <div class="terminal-dots">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <span class="terminal-title">ecoast-bash ~ v4.2.0-LTS (bash/zsh)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #10b981;">CONNECTED [200 OK]</span>
+        </div>
+
+        <div class="terminal-screen" id="terminalScreen">
+          <div class="terminal-output">
+            <div style="color: #38bdf8; font-weight: 700;">Welcome to ECOAST Engineering Terminal [Build 2026.09]</div>
+            <div style="color: #94a3b8; margin-top: 4px;">Explore programs, check scholarships, or take our aptitude quiz!</div>
+            <div style="color: #64748b; margin-top: 4px;">Type <span style="color: #00f0ff; font-weight: bold;">help</span> or click the command chips below:</div>
+          </div>
+        </div>
+
+        <div class="terminal-prompt-line" style="padding: 0.8rem 1.5rem; background: #050a18; border-top: 1px solid rgba(255,255,255,0.06);">
+          <span class="terminal-prefix">visitor@ecoast:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input" placeholder="Type command here (e.g. programs, scholarship, quiz, apply)..." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="terminal-quick-cmds">
+          <span style="font-size: 0.75rem; color: var(--text-muted); align-self: center;">Quick commands:</span>
+          <button class="terminal-cmd-chip" data-cmd="help">help</button>
+          <button class="terminal-cmd-chip" data-cmd="programs">programs</button>
+          <button class="terminal-cmd-chip" data-cmd="scholarship">scholarship</button>
+          <button class="terminal-cmd-chip" data-cmd="quiz">quiz</button>
+          <button class="terminal-cmd-chip" data-cmd="labs">labs</button>
+          <button class="terminal-cmd-chip" data-cmd="stats">stats</button>
+          <button class="terminal-cmd-chip" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions 4-Step Pipeline -->
+  <section class="pillars-section" id="admissions-steps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How to Join ECOAST</span>
+        <h2 data-i18n="admissions_title">Your 4-Step Journey to ECOAST</h2>
+        <p data-i18n="admissions_desc">Our application pipeline is streamlined, digital, and designed to evaluate your true potential.</p>
+      </div>
+
+      <div class="admissions-steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>1. Online Pre-Registration</h3>
+          <p>Fill out the basic applicant form on our portal. Receive your applicant tracking token and study kit immediately.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>2. Take the E-CAT Exam</h3>
+          <p>Schedule your free ECOAST College Aptitude Test (E-CAT). Evaluates STEM logic, algorithmic thinking, and problem solving.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>3. Faculty Interview & Review</h3>
+          <p>A friendly 15-minute technical discovery session with an engineering faculty mentor to discuss your goals and projects.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>4. Scholarship Grant & Enlistment</h3>
+          <p>Receive your admission certificate, formal scholarship grant waiver, and schedule your campus orientation!</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="admissions.html" class="btn btn-primary btn-lg">View Full Admissions Requirements & Dates &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alumni & Industry Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Proven Results</span>
+        <h2>Alumni Voices & Industry Impact</h2>
+        <p>Meet our graduates leading transformative engineering teams across the globe.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "The hands-on cloud testbed and Kubernetes labs at ECOAST gave me a massive head start. I passed my AWS Solutions Architect Professional exam before graduating and joined a global fintech firm as Senior Cloud Engineer at 22."
+          </p>
+          <div class="alumni-profile">
+            <div class="alumni-avatar">EM</div>
+            <div class="alumni-info">
+              <h4>Emerlyn Marana</h4>
+              <p>Cloud Solutions Architect • Class of 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "At ECOAST, you don't just memorize formulas. We built autonomous mobile robots in our second year. The Presidential Scholarship covered 100% of my fees, allowing me to focus on research and IEEE publications."
+          </p>
+          <div class="alumni-profile">
+            <div class="alumni-avatar">KR</div>
+            <div class="alumni-info">
+              <h4>Karl Vincent Reyes</h4>
+              <p>Autonomous Robotics Engineer • Class of 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "The Cyber Defense SOC simulation at ECOAST was identical to the security incident operations center I now lead in Singapore. Employers recognized our practical certifications immediately."
+          </p>
+          <div class="alumni-profile">
+            <div class="alumni-avatar">SL</div>
+            <div class="alumni-info">
+              <h4>Samantha Lim</h4>
+              <p>Lead DFIR Security Analyst • Class of 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Online Application & Pre-Registration Form -->
+  <section class="application-section" id="apply">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">AY 2026-2027 Admissions</span>
+        <h2>Online Pre-Registration & Inquiry Portal</h2>
+        <p>Take the first step toward your engineering degree. Submit your application below to secure your E-CAT slot.</p>
+      </div>
+
+      <div class="application-wrapper">
+        <form id="applicationForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appFullName">Full Legal Name *</label>
+              <input type="text" id="appFullName" class="form-input" placeholder="e.g. Juan Miguel Dela Cruz" required>
+            </div>
+            <div class="form-group">
+              <label for="appEmail">Email Address *</label>
+              <input type="email" id="appEmail" class="form-input" placeholder="e.g. juan.delacruz@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appPhone">Mobile Number *</label>
+              <input type="tel" id="appPhone" class="form-input" placeholder="e.g. +63 917 123 4567" required>
+            </div>
+            <div class="form-group">
+              <label for="appProgram">Preferred Degree Track *</label>
+              <select id="appProgram" class="form-select" required>
+                <option value="BS Computer Science (AI & Machine Learning)">B.S. Computer Science (AI & ML Track)</option>
+                <option value="BS Cloud Computing & Distributed Systems" selected>B.S. Cloud Computing & Distributed Architecture</option>
+                <option value="BS Computer Engineering (Robotics & IoT)">B.S. Computer Engineering (Robotics & IoT)</option>
+                <option value="BS Cybersecurity & Digital Forensics">B.S. Cybersecurity & Digital Forensics</option>
+                <option value="BS Data Science & Big Data Engineering">B.S. Data Science & Big Data Engineering</option>
+                <option value="BS Electronics Engineering (5G & Satellite)">B.S. Electronics Engineering (5G & Satellite)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appApplicantType">Applicant Category *</label>
+              <select id="appApplicantType" class="form-select" required>
+                <option value="Incoming College Freshman (Grade 12 STEM)">Incoming College Freshman (Grade 12 STEM)</option>
+                <option value="Incoming College Freshman (Non-STEM / TVL)">Incoming College Freshman (Non-STEM with Bridging)</option>
+                <option value="College Transferee">College Transferee</option>
+                <option value="Second Degree / Industry Upskilling">Second Degree / Industry Professional</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="appExamVenue">Preferred E-CAT Exam Mode *</label>
+              <select id="appExamVenue" class="form-select" required>
+                <option value="On-Campus (ECOAST Main Innovation Hub)">On-Campus (ECOAST Main Innovation Hub)</option>
+                <option value="Online Proctored Remote Examination">Online Proctored Remote Examination</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="appMessage">Optional Note or Portfolio Link (GitHub / LinkedIn / Projects):</label>
+            <textarea id="appMessage" class="form-textarea" placeholder="Tell us about your tech interests, hackathons joined, or questions for our faculty..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <span>Submit Application & Generate Token</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions (FAQ) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clear Answers</span>
+        <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+        <p data-i18n="faq_desc">Everything you need to know about admissions, accreditation, facilities, and student life at ECOAST.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What does ECOAST stand for, and is it recognized by CHED and ABET?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            ECOAST stands for the <strong>Engineering Computing Academy of Science and Technology</strong>. All our undergraduate degree programs are recognized by the Commission on Higher Education (CHED) and curricula are structured in direct alignment with international ABET (Accreditation Board for Engineering and Technology) criteria for computing and engineering.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can non-STEM Senior High School graduates apply to ECOAST?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes! We welcome students from ABM, HUMSS, GAS, and TVL-ICT tracks. Non-STEM qualifiers undergo our free 4-week <em>Pre-Calculus & Algorithmic Foundations Summer Bridging Program</em> prior to the start of the first semester, ensuring everyone succeeds in engineering.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does the 100% Presidential Scholarship work?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            High school graduates With Highest Honors (or those scoring in the top 1st percentile of the E-CAT entrance exam) are awarded the Presidential Scholarship, which covers 100% of both tuition and laboratory fees throughout the 4-year degree, subject to maintaining a GWA of 1.75 or higher.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What computer/laptop specifications are required for incoming students?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Any modern laptop with an Intel Core i5/AMD Ryzen 5 processor, 16GB RAM, and 512GB SSD is sufficient for coursework. For heavy deep learning, CAD, and FPGA simulation, students are provided unlimited cloud compute instances on our on-campus NVIDIA H100 supercomputing cluster.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are campus dormitories and high-speed internet available?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, the ECOAST Tech Village offers secure on-campus residences with 10Gbps symmetrical fiber internet, 24/7 hacker study pods, ergonomic workstations, and recreational facilities.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Curriculum Syllabus Modal -->
+  <div class="modal-overlay" id="curriculumModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalDegreeTitle" style="font-size: 1.35rem; color: #ffffff;">Degree Curriculum</h3>
+          <p id="modalDuration" style="font-size: 0.85rem; color: var(--accent-cyan);">4 Years • 8 Semesters</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc" style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Program outline.</p>
+        <div class="modal-year-tabs">
+          <button class="year-tab-btn active" data-year="1">1st Year</button>
+          <button class="year-tab-btn" data-year="2">2nd Year</button>
+          <button class="year-tab-btn" data-year="3">3rd Year</button>
+          <button class="year-tab-btn" data-year="4">4th Year (Capstones & Co-Op)</button>
+        </div>
+        <div class="courses-list" id="modalCoursesList">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtual Assistant Floating Chatbot Widget ("Echo") -->
+  <button class="chat-widget-btn" id="chatWidgetBtn" aria-label="Open ECOAST Virtual Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <div class="chat-widget-popup" id="chatWidgetPopup">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h4 style="font-size: 0.95rem; color: #ffffff;">Echo Virtual Assistant</h4>
+          <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Online • ECOAST Bot</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">
+        Hello! I am <strong>Echo</strong>, ECOAST's AI Advisor. How can I assist you today? You can ask me in English or Tagalog about courses, tuition, scholarships, or entrance exam dates!
+      </div>
+    </div>
+
+    <div class="chat-chips">
+      <button class="chat-chip" data-query="How to apply for AY 2026?">How to apply?</button>
+      <button class="chat-chip" data-query="Tuition & Scholarships">Tuition & Grants</button>
+      <button class="chat-chip" data-query="Available degree programs">Programs List</button>
+      <button class="chat-chip" data-query="Campus location">Campus Address</button>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Type question (e.g. Magkano tuition?)...">
+      <button id="sendChatBtn" class="chat-send-btn" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Master Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="ECOAST Logo" width="190" height="44">
+          <p>
+            <strong>ECOAST</strong> — Engineering Computing Academy of Science and Technology. Empowering next-generation engineers, researchers, and technology leaders.
+          </p>
+          <div style="margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-muted);">
+            <div>📍 ECOAST Innovation City Hub, University Parkway</div>
+            <div>📞 +63 (2) 8888-ECOAST • +63 917 800 3262</div>
+            <div>✉️ admissions@ecoast.edu.ph</div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Academic Tracks</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html#cs">B.S. Computer Science (AI/ML)</a></li>
+            <li><a href="programs.html#cloud">B.S. Cloud Computing</a></li>
+            <li><a href="programs.html#cpe">B.S. Computer Engineering</a></li>
+            <li><a href="programs.html#cyber">B.S. Cybersecurity</a></li>
+            <li><a href="programs.html#data">B.S. Data Science</a></li>
+            <li><a href="programs.html#ece">B.S. Electronics Engineering</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Admissions & Aid</h4>
+          <ul class="footer-links">
+            <li><a href="admissions.html#requirements">Requirements Checklist</a></li>
+            <li><a href="admissions.html#ecat">E-CAT Examination Dates</a></li>
+            <li><a href="admissions.html#scholarships">Presidential 100% Grant</a></li>
+            <li><a href="admissions.html#scholarships">DOST-SEI Co-Scholarships</a></li>
+            <li><a href="#calculator">Tuition Estimator</a></li>
+            <li><a href="admissions.html#transferee">Transferee Evaluation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Innovation & Campus</h4>
+          <ul class="footer-links">
+            <li><a href="campus.html#hpc">HPC Supercomputing Cluster</a></li>
+            <li><a href="campus.html#robotics">Autonomous Robotics Arena</a></li>
+            <li><a href="campus.html#soc">Cyber Defense War Room</a></li>
+            <li><a href="campus.html#clubs">Student Tech Guilds & IEEE</a></li>
+            <li><a href="campus.html#hackathons">HackHacks 2026</a></li>
+            <li><a href="about.html">About Leadership & Faculty</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ECOAST (Engineering Computing Academy of Science and Technology). All rights reserved.
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" title="GitHub">GH</a>
+          <a href="#" class="social-link" title="LinkedIn">IN</a>
+          <a href="#" class="social-link" title="Discord">DC</a>
+          <a href="#" class="social-link" title="Twitter / X">X</a>
+          <a href="#" class="social-link" title="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
