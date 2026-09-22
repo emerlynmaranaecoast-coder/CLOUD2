@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Life & Innovation Labs | ECOAST</title>
+  <meta name="description" content="Explore ECOAST's futuristic innovation campus: NVIDIA GPU supercomputing cluster, autonomous robotics arena, cyber defense SOC, maker spaces, and student tech guilds.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .campus-hero {
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    }
+    .facility-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .facility-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: var(--shadow-glow);
+    }
+    .facility-card.reverse {
+      grid-template-columns: 1fr 1.2fr;
+    }
+    .facility-card.reverse .facility-img-wrap {
+      order: 2;
+    }
+    .facility-img-wrap img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+    .facility-info {
+      padding: 2.5rem;
+    }
+    .specs-badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+    .specs-badge {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      padding: 0.25rem 0.65rem;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: var(--radius-sm);
+      color: var(--accent-cyan);
+    }
+    .clubs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .club-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      transition: var(--transition);
+    }
+    .club-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+    }
+    @media (max-width: 900px) {
+      .facility-card, .facility-card.reverse {
+        grid-template-columns: 1fr;
+      }
+      .facility-card.reverse .facility-img-wrap {
+        order: 1;
+      }
+      .clubs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ECOAST Home">
+        <img src="images/logo.svg" alt="ECOAST Logo" width="180" height="42">
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="campus.html" class="nav-link active" data-i18n="nav_labs">Innovation Labs</a></li>
+          <li><a href="index.html#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+          <li><a href="admissions.html" class="nav-link" data-i18n="nav_admissions">Admissions</a></li>
+          <li><a href="index.html#terminal" class="nav-link" data-i18n="nav_terminal">CLI Terminal</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Language">EN</button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Theme">☀️</button>
+        <a href="index.html#apply" class="btn btn-primary btn-sm" data-i18n="nav_apply">Apply Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="campus-hero">
+    <div class="container">
+      <span class="section-tag">Next-Gen Tech Ecosystem</span>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">The ECOAST Innovation Campus</h1>
+      <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+        An inspiring, high-performance physical and digital environment designed for engineers, coders, and makers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Facilities Detailed Tour -->
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <!-- 1. HPC Lab -->
+    <div class="facility-card">
+      <div class="facility-img-wrap">
+        <img src="images/robotics-lab.jpg" alt="ECOAST Quantum and High Performance Computing Lab">
+      </div>
+      <div class="facility-info">
+        <span class="degree-tag">RESEARCH FACILITY 01</span>
+        <h2 style="font-size: 1.8rem; margin: 0.6rem 0;">Quantum & Supercomputing Cluster</h2>
+        <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+          Our premier computing facility features an on-premise supercluster powered by 32 NVIDIA H100 Tensor Core GPUs with 1.2 PetaFLOPS FP64 compute capacity. Undergrads and faculty researchers run molecular dynamics, train custom LLMs, and conduct quantum gate simulations directly via internal JupyterHub nodes.
+        </p>
+        <div class="specs-badge-list">
+          <span class="specs-badge">NVIDIA H100 80GB SXM5</span>
+          <span class="specs-badge">InfiniBand 100Gbps Low Latency</span>
+          <span class="specs-badge">2 Petabytes NVMe Storage</span>
+          <span class="specs-badge">Slurm Workload Manager</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Robotics Arena -->
+    <div class="facility-card reverse">
+      <div class="facility-img-wrap">
+        <img src="images/hero-campus.jpg" alt="Autonomous Robotics Arena and Flight Airspace">
+      </div>
+      <div class="facility-info">
+        <span class="degree-tag">RESEARCH FACILITY 02</span>
+        <h2 style="font-size: 1.8rem; margin: 0.6rem 0;">Autonomous Robotics & Mechatronics Arena</h2>
+        <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+          An indoor testing space outfitted with sub-millimeter Vicon optical motion capture cameras, automated obstacle courses, and autonomous drone landing pads. Students assemble robotic arms, program ROS2 navigation stacks, and test self-driving miniature vehicles.
+        </p>
+        <div class="specs-badge-list">
+          <span class="specs-badge">Universal Robots UR5e 6-DoF Arms</span>
+          <span class="specs-badge">Vicon Optical MoCap Tracking</span>
+          <span class="specs-badge">Velodyne 3D LiDAR Sensors</span>
+          <span class="specs-badge">ROS2 Humble & Gazebo Sim</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Collaboration Hub -->
+    <div class="facility-card">
+      <div class="facility-img-wrap">
+        <img src="images/students-collaboration.jpg" alt="Student Collaboration Hacker Hub">
+      </div>
+      <div class="facility-info">
+        <span class="degree-tag">COMMUNITY FACILITY 03</span>
+        <h2 style="font-size: 1.8rem; margin: 0.6rem 0;">24/7 Hacker Lounge & Venture MakerSpace</h2>
+        <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+          Innovation doesn't keep 9-to-5 hours. Our 24/7 Hacker Lounge gives student startup founders and hackathon teams continuous access to ultra-fast fiber internet, 3D printing farms, SMD soldering stations, and acoustic ideation pods.
+        </p>
+        <div class="specs-badge-list">
+          <span class="specs-badge">10Gbps Symmetrical Internet</span>
+          <span class="specs-badge">Bambu Lab 3D Printing Farm</span>
+          <span class="specs-badge">Weller Soldering & Rework Stations</span>
+          <span class="specs-badge">Sleep Pods & Café Bar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Organizations & Clubs -->
+    <section style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Student Life</span>
+        <h2>Student Tech Guilds & Organizations</h2>
+        <p>Thrive in vibrant student chapters fostering innovation, hackathon victories, and lifelong networks.</p>
+      </div>
+
+      <div class="clubs-grid">
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌐</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Google DSC @ ECOAST</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Google Developer Student Club organizing workshops on Flutter, TensorFlow, and Google Cloud Solution Challenges.
+          </p>
+        </div>
+
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">IEEE Student Branch</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Connects future engineers to global technical symposiums, research publications, and hardware design competitions.
+          </p>
+        </div>
+
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛡️</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">CyberSec Blue / Red Guild</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Competitive Capture-the-Flag (CTF) champions practicing weekly defensive triage and penetration testing.
+          </p>
+        </div>
+
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">ECOAST Robotics Guild</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Home of Robocon champions developing combat robots, autonomous line tracers, and aerial rescue drones.
+          </p>
+        </div>
+
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">👩‍💻</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Women in Technology (WiT)</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Empowering women in engineering and computing through mentorship, code clinics, and executive career talks.
+          </p>
+        </div>
+
+        <div class="club-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem;">Cloud & DevOps Society</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Focused on Kubernetes, serverless architecture, and enterprise cloud certification study cohorts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathons & Events -->
+    <section style="margin-top: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Competitions & Summits</span>
+        <h2>Annual Events & Hackathons</h2>
+        <p>Showcase your code, compete for cash prizes, and pitch directly to venture capitalists.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+          <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; font-weight: bold;">NOVEMBER 14-16, 2026</span>
+          <h3 style="font-size: 1.4rem; margin: 0.6rem 0;">HackHacks 2026: AI for Resilient Communities</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.2rem;">
+            48-hour continuous hackathon bringing 400+ developers together to build AI and IoT solutions tackling disaster management, food security, and renewable micro-grids.
+          </p>
+          <span class="floating-badge">₱500,000 Prize Pool</span>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+          <span style="color: var(--accent-emerald); font-family: var(--font-mono); font-size: 0.85rem; font-weight: bold;">FEBRUARY 20-22, 2027</span>
+          <h3 style="font-size: 1.4rem; margin: 0.6rem 0;">National Robocon & Autonomous Systems Expo</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.2rem;">
+            Inter-university robotics championship featuring autonomous obstacle courses, drone acrobatics, and industrial automation showcases.
+          </p>
+          <span class="floating-badge">Open to Public & High Schools</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chatbot Widget -->
+  <button class="chat-widget-btn" id="chatWidgetBtn" aria-label="Open ECOAST Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div class="chat-widget-popup" id="chatWidgetPopup">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h4 style="font-size: 0.95rem; color: #ffffff;">Echo Virtual Assistant</h4>
+          <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Online • ECOAST Bot</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;">&times;</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">
+        Ask me about campus dorms, robotics equipment, or booking an on-site visit!
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Type question...">
+      <button id="sendChatBtn" class="chat-send-btn" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 ECOAST (Engineering Computing Academy of Science and Technology). All rights reserved.</div>
+        <div><a href="index.html#apply" style="color: var(--accent-cyan);">Apply for AY 2026-2027 &rarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

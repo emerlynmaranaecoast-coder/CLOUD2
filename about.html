@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About ECOAST | Engineering Computing Academy of Science and Technology</title>
+  <meta name="description" content="Learn about ECOAST: our founding mission, academic deans, ABET-aligned standards, industry council, and dedication to building the future of computing and engineering.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .about-hero {
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+    }
+    .value-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+    }
+    .leader-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .leader-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .leader-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: var(--shadow-glow);
+    }
+    .leader-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--grad-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 auto 1.2rem auto;
+      font-family: var(--font-heading);
+    }
+    @media (max-width: 900px) {
+      .leader-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ECOAST Home">
+        <img src="images/logo.svg" alt="ECOAST Logo" width="180" height="42">
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link active" data-i18n="nav_about">About</a></li>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="campus.html" class="nav-link" data-i18n="nav_labs">Innovation Labs</a></li>
+          <li><a href="index.html#calculator" class="nav-link" data-i18n="nav_calculator">Calculator</a></li>
+          <li><a href="admissions.html" class="nav-link" data-i18n="nav_admissions">Admissions</a></li>
+          <li><a href="index.html#terminal" class="nav-link" data-i18n="nav_terminal">CLI Terminal</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn" title="Language">EN</button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Theme">☀️</button>
+        <a href="index.html#apply" class="btn btn-primary btn-sm" data-i18n="nav_apply">Apply Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="section-tag">Our Legacy & Mission</span>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">About ECOAST</h1>
+      <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 2rem auto; font-size: 1.15rem;">
+        The <strong>Engineering Computing Academy of Science and Technology (ECOAST)</strong> is dedicated to educating bold thinkers who build ethical, resilient, and intelligent technologies for the Philippines and the global society.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <main class="container" style="padding-bottom: 6rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 5rem;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <span class="degree-tag">OUR MISSION</span>
+        <h2 style="font-size: 1.8rem; margin: 0.8rem 0 1rem 0;">Pioneering Applied Computing & Engineering</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+          To deliver rigorous, accessible, and industry-integrated education in computational science, robotics, cybersecurity, and cloud engineering; to cultivate ethical technologists who transform communities and create high-value intellectual property.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem;">
+        <span class="degree-tag">OUR VISION</span>
+        <h2 style="font-size: 1.8rem; margin: 0.8rem 0 1rem 0;">A Premier Global Technological Institute</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+          To stand as Southeast Asia’s epicenter of computing and engineering innovation, recognized globally for producing pioneers who architect the world's most resilient distributed platforms, autonomous systems, and artificial intelligence models.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values: The E.C.O.A.S.T. Code -->
+    <section style="margin-bottom: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Institutional Principles</span>
+        <h2>The ECOAST Code</h2>
+        <p>The foundational pillars guiding our research, faculty pedagogy, and student culture.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">E — Excellence</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Relentless pursuit of mathematical precision, architectural cleanliness, and scientific rigor in every line of code and engineering schematic.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">C — Computing Prowess</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Deep mastery of algorithms, high-performance supercomputing, and distributed systems that can scale to billions of transactions.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">O — Open Innovation</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Fostering open-source contributions, collaborative multidisciplinary research, and transparent peer review.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">A — Agility</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Rapid adaptation to emerging technological paradigms—from quantum computing to generative AI—curating curricula in real-time.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">S — Stewardship</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Applying technology responsibly to preserve ecological health, combat climate instability, and ensure digital equity.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin-bottom: 0.5rem;">T — Technology for Humanity</h3>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Building ethical software and robotic systems designed to elevate human dignity, empower workers, and solve societal crises.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Faculty Deans -->
+    <section style="margin-bottom: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Academic Leadership</span>
+        <h2>Deans & Research Directors</h2>
+        <p>Led by veteran technologists, IEEE senior members, and former Silicon Valley engineering executives.</p>
+      </div>
+
+      <div class="leader-grid">
+        <div class="leader-card">
+          <div class="leader-avatar">DR</div>
+          <h3 style="font-size: 1.25rem;">Dr. Roberto S. Tan, Ph.D.</h3>
+          <div style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600; margin: 0.3rem 0 0.8rem 0;">President & Chancellor</div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Former Lead Architect at Bell Labs, Ph.D. in Computer Engineering from Stanford, IEEE Life Fellow with 45+ patents in distributed routing.
+          </p>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-avatar">EM</div>
+          <h3 style="font-size: 1.25rem;">Engr. Emerlyn Marana, M.S.</h3>
+          <div style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600; margin: 0.3rem 0 0.8rem 0;">Dean of Computing & Cloud Architecture</div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            AWS Certified Solutions Architect Fellow, Kubernetes Community Leader, and Director of the ECOAST Distributed Cloud Research Lab.
+          </p>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-avatar">CL</div>
+          <h3 style="font-size: 1.25rem;">Dr. Christine Joy Lazaro, Ph.D.</h3>
+          <div style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600; margin: 0.3rem 0 0.8rem 0;">Dean of Engineering & Robotics</div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">
+            Ph.D. in Autonomous Systems from Tokyo Tech, Principal Investigator for National DOST Drone Swarm & Precision Agriculture initiatives.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accreditations & Standards -->
+    <section>
+      <div class="section-header">
+        <span class="section-tag">Quality Assured</span>
+        <h2>Accreditations & Industry Councils</h2>
+        <p>Our degrees meet the most rigorous international and national academic criteria.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.8rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📜</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;">ABET Criteria</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary);">Direct alignment with Computing (CAC) and Engineering (EAC) commissions.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.8rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🏛️</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;">CHED Recognized</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary);">Fully compliant with Commission on Higher Education Policies, Standards & Guidelines.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.8rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🔬</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;">DOST-SEI Partner</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary);">Accredited deliverer of DOST S&T priority undergraduate degree scholarships.</p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.8rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🛡️</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;">ISO 9001:2015</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary);">Certified Quality Management System for Higher Engineering Education.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chatbot Widget -->
+  <button class="chat-widget-btn" id="chatWidgetBtn" aria-label="Open ECOAST Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div class="chat-widget-popup" id="chatWidgetPopup">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h4 style="font-size: 0.95rem; color: #ffffff;">Echo Virtual Assistant</h4>
+          <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Online • ECOAST Bot</span>
+        </div>
+      </div>
+      <button id="closeChatBtn" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;">&times;</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message bot">
+        Ask me about ECOAST's history, accreditation, or faculty credentials!
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="Type question...">
+      <button id="sendChatBtn" class="chat-send-btn" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 ECOAST (Engineering Computing Academy of Science and Technology). All rights reserved.</div>
+        <div><a href="index.html#apply" style="color: var(--accent-cyan);">Apply for AY 2026-2027 &rarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
